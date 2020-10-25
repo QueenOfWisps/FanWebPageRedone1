@@ -22,10 +22,26 @@ namespace FanWebPageRedone.Controllers
         {
             return View();
         }
-        
+
         public IActionResult History() { return View(); }
 
-        public IActionResult Stories() { return View(); }
+        public IActionResult Stories()
+        {
+            Story model = new Story();//new object story created.
+            User userName = new User();//new object created
+            model.UserName = userName; //you need to make the username from the model equal the initialized model.
+            return View(model); //put model into view.
+        }
+
+        [HttpPost]
+        public IActionResult Stories(Story model) //specify class/model, then pass in the created model that is story.
+        {
+            return View(model);// pass in that model to view. 
+
+        }
+
+
+
 
         public IActionResult Privacy()
         {
