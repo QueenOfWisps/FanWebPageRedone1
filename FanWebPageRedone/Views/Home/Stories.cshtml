@@ -3,13 +3,35 @@
 
     ViewData["Title"] = "Stories";
 }
-<div class="text-center">
-    <h1 class="display-4">Stories lana del rey</h1>
-    <p>Stories about the famous lana del rey, queen of the rivierra.!</p>
+
+<div class="container">
+    <header class="jumbotron">
+        <h1>Lana del rey stories page</h1>
+    </header>
+</div>
+<div>
+    <h1>Stories</h1>
+    <strong>Enter your story</strong>
 </div>
 
-<h1>Book Review</h1>
-<strong>Enter your Review</strong>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <p>lana del rey has amazing stories</p>
+        <div class="col-sm-1"></div>
+        <p> they usually involve other famous people or close frineds/fans</p>
+    </div>
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <p>she is a literal angel</p>
+        <div class="col-sm-2"></div>
+        <p>also stream dynamite by bts</p>
+    </div>
+    <div class="row">
+        ...
+    </div>
+</div>
+
 <br />
 <form method="post">
     <label asp-for="StoryTitle">Title</label><br />
@@ -25,7 +47,7 @@
     <textarea asp-for="Text" placeholder="Write story here">
 </textarea><br />
 
-    <button type="submit">Submit</button>
+    <button class="m-2 btn btn-primary" type="submit">Submit</button>
 </form>
 <br />
 <hr />
@@ -33,16 +55,16 @@
 <h2>Your Stories</h2>
 <p>
     <strong>Title:</strong><br />
-    @Model.StoryTitle<br/>
+    @Model.StoryTitle<br />
     <strong>Topic</strong><br />
     @Model.Topic<br />
-     <strong>Name:</strong><br />
+    <strong>Name:</strong><br />
     @Model.UserName.Name<br />
     <strong>Text:</strong><br />
     @Model.Text </br >
     <strong>Date:</strong><br />
     @Model.Date<br />
-    
+
 </p>
 
 <a asp-controller="Home" asp-action="Index">Home</a>
