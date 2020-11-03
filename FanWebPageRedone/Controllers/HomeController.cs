@@ -39,6 +39,19 @@ namespace FanWebPageRedone.Controllers
             return View(model);// pass in that model to view. 
 
         }
+        [HttpGet]
+        public IActionResult Quiz() 
+        {
+            return View();
+        }
+
+        [HttpPost]
+
+        public IActionResult Quiz(QuizVM quiz) 
+        {
+            quiz.CheckAnswers();
+            return View(quiz);
+        }
 
 
 

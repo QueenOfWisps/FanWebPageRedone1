@@ -41,3 +41,5 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcorea
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\Razor\Views\Source\Index.cshtml.g.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\Razor\Views\Source\Links.cshtml.g.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\libman.json
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\FanWebPageRedoneFall2020 - Web Deploy\profile.arm.json
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\Razor\Views\Home\Quiz.cshtml.g.cs
