@@ -12,8 +12,6 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcorea
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.csprojAssemblyReference.cache
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.AssemblyInfoInputs.cache
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.AssemblyInfo.cs
-C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.csproj.CoreCompileInputs.cache
-C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.RazorAssemblyInfo.cache
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.RazorAssemblyInfo.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.TagHelpers.input.cache
@@ -43,3 +41,20 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcorea
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\libman.json
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\FanWebPageRedoneFall2020 - Web Deploy\profile.arm.json
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\Razor\Views\Home\Quiz.cshtml.g.cs
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\System.Collections.Immutable.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\System.Diagnostics.DiagnosticSource.dll
