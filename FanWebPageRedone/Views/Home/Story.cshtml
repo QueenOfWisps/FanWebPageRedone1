@@ -1,0 +1,25 @@
+﻿@model List<Story>
+@{
+
+    ViewData["Title"] = "Stories";
+}
+
+
+
+<h2>Your Stories</h2>
+@foreach (Story story in Model)
+{
+<p>
+    <strong>Title:</strong><br />
+    @story.StoryTitle<br />
+    <strong>Topic</strong><br />
+    @story.Topic<br />
+    <strong>Name:</strong><br />
+    @story.UserName.Name<br />
+    <strong>Text:</strong><br />
+    @story.Text <br />
+    <strong>Date:</strong><br />
+    @story.Date<br />
+
+</p>
+}

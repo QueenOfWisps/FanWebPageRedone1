@@ -11,11 +11,11 @@ namespace FanWebPageRedone.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        StoriesContext context; //initialize
+        public HomeController(StoriesContext c)
         {
-            _logger = logger;
+            context = c; //object passed in and assigning object to context. 
+
         }
 
         public IActionResult Index()
@@ -23,7 +23,10 @@ namespace FanWebPageRedone.Controllers
             return View();
         }
 
-        public IActionResult History() { return View(); }
+        public IActionResult History() 
+        { 
+            return View(); 
+        }
 
         public IActionResult Stories()
         {
@@ -33,25 +36,37 @@ namespace FanWebPageRedone.Controllers
             return View(model); //put model into view.
         }
 
+
         [HttpPost]
         public IActionResult Stories(Story model) //specify class/model, then pass in the created model that is story.
         {
+            context.Story.Add(model);
+            context.SaveChanges();
             return View(model);// pass in that model to view. 
 
         }
+        public IActionResult Story() 
+        {
+            var stories = context.Story.Include(Story => Story.User).ToList<Story>();
+            return View();
+        }
         [HttpGet]
-        public IActionResult Quiz() 
+        public IActionResult Quiz()
         {
             return View();
         }
 
         [HttpPost]
 
-        public IActionResult Quiz(QuizVM quiz) 
+        public IActionResult Quiz(QuizVM quiz)
         {
             quiz.CheckAnswers();
             return View(quiz);
         }
+
+
+
+
 
 
 

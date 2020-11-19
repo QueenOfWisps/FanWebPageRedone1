@@ -11,7 +11,7 @@ namespace FanWebPageRedone.Models
         public StoriesContext(
             DbContextOptions<StoriesContext>options) : base(options) { }
 
-        public DbSet<Story> Topic { get; set;  }
+        public DbSet<Story> Story { get; set;  }
         public DbSet<User>  User  { get; set; }
 
     }
