@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using FanWebPageRedone.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace FanWebPageRedone.Controllers
 {
@@ -47,7 +48,7 @@ namespace FanWebPageRedone.Controllers
         }
         public IActionResult Story() 
         {
-            var stories = context.Story.Include(Story => Story.User).ToList<Story>();
+            var stories = context.Story.Include(Story => Story.UserName).ToList<Story>();
             return View();
         }
         [HttpGet]
