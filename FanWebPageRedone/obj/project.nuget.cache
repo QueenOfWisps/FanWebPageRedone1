@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4JqlmHq0FOxvI5v7kOnMKi0e2PJipxqRxJ8TEa0fTXYEZdkyXMEZpB+EH0lU5TvdYnzK47/jvYqzVG++JPzW0w==",
+  "dgSpecHash": "PK1b2C0AR+hpNZ6B2uy+cBVGdIESksPrHA+D7ZeFUkwBG7LNzEOjUU6xau7qFWDtVCJfEOEPllFg1x9BIdyAUQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\princ\\source\\repos\\FanWebPageRedone\\FanWebPageRedone\\FanWebPageRedone.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\princ\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.9\\microsoft.entityframeworkcore.design.3.1.9.nupkg.sha512",
     "C:\\Users\\princ\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.9\\microsoft.entityframeworkcore.relational.3.1.9.nupkg.sha512",
     "C:\\Users\\princ\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.9\\microsoft.entityframeworkcore.sqlserver.3.1.9.nupkg.sha512",
+    "C:\\Users\\princ\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.9\\microsoft.entityframeworkcore.tools.3.1.9.nupkg.sha512",
     "C:\\Users\\princ\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.9\\microsoft.extensions.caching.abstractions.3.1.9.nupkg.sha512",
     "C:\\Users\\princ\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.9\\microsoft.extensions.caching.memory.3.1.9.nupkg.sha512",
     "C:\\Users\\princ\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.9\\microsoft.extensions.configuration.3.1.9.nupkg.sha512",

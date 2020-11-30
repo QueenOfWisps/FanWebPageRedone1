@@ -21,22 +21,22 @@ namespace FanWebPageRedone.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Topic",
+                name: "Story",
                 columns: table => new
                 {
                     StoryId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     StoryTitle = table.Column<string>(nullable: true),
-                    Topic = table.Column<string>(nullable: true),
+                    Story = table.Column<string>(nullable: true),
                     UserNameUserId = table.Column<int>(nullable: true),
                     Text = table.Column<string>(nullable: true),
                     Date = table.Column<DateTime>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Topic", x => x.StoryId);
+                    table.PrimaryKey("PK_Story", x => x.StoryId);
                     table.ForeignKey(
-                        name: "FK_Topic_User_UserNameUserId",
+                        name: "FK_Story_User_UserNameUserId",
                         column: x => x.UserNameUserId,
                         principalTable: "User",
                         principalColumn: "UserId",
@@ -44,15 +44,15 @@ namespace FanWebPageRedone.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Topic_UserNameUserId",
-                table: "Topic",
+                name: "IX_Story_UserNameUserId",
+                table: "Story",
                 column: "UserNameUserId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Topic");
+                name: "Story");
 
             migrationBuilder.DropTable(
                 name: "User");

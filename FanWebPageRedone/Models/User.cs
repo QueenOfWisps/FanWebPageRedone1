@@ -12,5 +12,6 @@ namespace FanWebPageRedone.Models
         // this is a primary key, for the user table. it will also serve as a forign key in Story.cs
         public int UserId { get; set; }
         public string Name { get; set; }
+     
     }
 }

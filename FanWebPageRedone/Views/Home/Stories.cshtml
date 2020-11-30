@@ -40,8 +40,8 @@
     <label asp-for="Topic">r</label>Topic<br />
     <input asp-for="Topic" /><br />
 
-    <label asp-for="UserName.Name">YourName</label><br />
-    <input asp-for="UserName.Name" /><br />
+    <label asp-for="User">YourName</label><br />
+    <input asp-for="UserName" /><br />
 
     <label asp-for="Text">Story</label><br />
     <textarea asp-for="Text" placeholder="Write story here">
@@ -59,7 +59,7 @@
     <strong>Topic</strong><br />
     @Model.Topic<br />
     <strong>Name:</strong><br />
-    @Model.UserName.Name<br />
+    @Model.User.Name<br />
     <strong>Text:</strong><br />
     @Model.Text <br />
     <strong>Date:</strong><br />

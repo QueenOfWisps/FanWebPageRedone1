@@ -33,7 +33,9 @@ namespace FanWebPageRedone.Controllers
         {
             Story model = new Story();//new object story created.
             User userName = new User();//new object created
-            model.UserName = userName; //you need to make the username from the model equal the initialized model.
+            userName.Name = "Test";
+            userName.UserId = 1;
+            model.User = userName; //you need to make the username from the model equal the initialized model.
             return View(model); //put model into view.
         }
 
@@ -41,6 +43,8 @@ namespace FanWebPageRedone.Controllers
         [HttpPost]
         public IActionResult Stories(Story model) //specify class/model, then pass in the created model that is story.
         {
+            model.User = new User();
+            model.User.Name = model.UserName;
             context.Story.Add(model);
             context.SaveChanges();
             return View(model);// pass in that model to view. 
@@ -48,8 +52,8 @@ namespace FanWebPageRedone.Controllers
         }
         public IActionResult Story() 
         {
-            var stories = context.Story.Include(Story => Story.UserName).ToList<Story>();
-            return View();
+            var stories = context.Story.Include(Story => Story.User).ToList<Story>();
+            return View(stories);
         }
         [HttpGet]
         public IActionResult Quiz()
