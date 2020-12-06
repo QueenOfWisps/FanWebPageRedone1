@@ -7,16 +7,18 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using FanWebPageRedone.Models;
 using Microsoft.EntityFrameworkCore;
+using FanWebPageRedone.Repos;
 
 namespace FanWebPageRedone.Controllers
 {
     public class HomeController : Controller
     {
-        StoriesContext context; //initialize
-        public HomeController(StoriesContext c)
+        Istories repo;
+    
+        public HomeController(Istories r)
         {
-            context = c; //object passed in and assigning object to context. 
-
+            //object passed in and assigning object to context. 
+            repo = r;
         }
 
         public IActionResult Index()
@@ -43,17 +45,18 @@ namespace FanWebPageRedone.Controllers
         [HttpPost]
         public IActionResult Stories(Story model) //specify class/model, then pass in the created model that is story.
         {
-            model.User = new User();
+           // model.User = new User();
             model.User.Name = model.UserName;
-            context.Story.Add(model);
-            context.SaveChanges();
-            return View(model);// pass in that model to view. 
+            repo.AddStory(model);
+            return Redirect("Story");// pass to story
 
         }
         public IActionResult Story() 
         {
-            var stories = context.Story.Include(Story => Story.User).ToList<Story>();
-            return View(stories);
+            // var stories = context.Story.Include(Story => Story.User).ToList<Story>();
+            // return View(stories);
+            List<Story> story = repo.Story.ToList<Story>();
+            return View();
         }
         [HttpGet]
         public IActionResult Quiz()

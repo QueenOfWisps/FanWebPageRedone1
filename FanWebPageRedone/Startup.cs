@@ -27,7 +27,7 @@ namespace FanWebPageRedone
         {
             services.AddControllersWithViews();
             services.AddDbContext<StoriesContext>(options =>
-            options.UseSqlServer(Configuration["Data:FanWebPageRedone:ConnectionString"]));
+            options.UseSqlServer(Configuration["ConnectionStrings:ConnectionString"]));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
