@@ -38,14 +38,14 @@ namespace FanWebPageRedone.Migrations
                     b.Property<string>("Topic")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int?>("UserNameUserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("StoryId");
 
-                    b.HasIndex("UserNameUserId");
+                    b.HasIndex("UserId");
 
-                    b.ToTable("Topic");
+                    b.ToTable("Story");
                 });
 
             modelBuilder.Entity("FanWebPageRedone.Models.User", b =>
@@ -65,9 +65,9 @@ namespace FanWebPageRedone.Migrations
 
             modelBuilder.Entity("FanWebPageRedone.Models.Story", b =>
                 {
-                    b.HasOne("FanWebPageRedone.Models.User", "UserName")
+                    b.HasOne("FanWebPageRedone.Models.User", "User")
                         .WithMany()
-                        .HasForeignKey("UserNameUserId");
+                        .HasForeignKey("UserId");
                 });
 #pragma warning restore 612, 618
         }

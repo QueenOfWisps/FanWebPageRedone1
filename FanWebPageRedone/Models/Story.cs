@@ -15,13 +15,28 @@ namespace FanWebPageRedone.Models
             public string Topic { get; set; }
             //setting up foriegn key from user in story. entity framework automatically sets up a relationship between these two tables 
             //when a username of type user is created. it just knows its from user. its magic.
-            public User User { get; set; }
+            public virtual User User { get; set; }
             public string Text { get; set; }
             public DateTime Date { get; set; }
+      
 
 
-        [NotMapped]
-        public string UserName { get; set; }
+        public List<Story> Seed()
+        {
+            //be sure to call in startup <3.
+
+
+            //seeded data inside where its own table lives.
+            //instantiate a new list of type usermodel
+            var rec = new List<Story>();
+            //add records to the list. 
+            rec.Add(new Story() { Text="mypost" });
+            rec.Add(new Story() { Text="post3" });
+            rec.Add(new Story() { Text="hello" });
+            rec.Add(new Story() { Text = "Tony" });
+
+            return rec;//return list.
+        }
     }
 }
 

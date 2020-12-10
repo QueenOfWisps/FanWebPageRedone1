@@ -142,3 +142,4 @@ C:\Users\princ\source\repos\FanWebPageRedone\Tests\bin\Debug\netcoreapp3.1\runti
 C:\Users\princ\source\repos\FanWebPageRedone\Tests\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\princ\source\repos\FanWebPageRedone\Tests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\princ\source\repos\FanWebPageRedone\Tests\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\princ\source\repos\FanWebPageRedone\Tests\bin\Debug\netcoreapp3.1\Microsoft.Web.Services3.dll

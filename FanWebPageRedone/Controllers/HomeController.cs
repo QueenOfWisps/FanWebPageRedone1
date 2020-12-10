@@ -46,17 +46,32 @@ namespace FanWebPageRedone.Controllers
         public IActionResult Stories(Story model) //specify class/model, then pass in the created model that is story.
         {
            // model.User = new User();
-            model.User.Name = model.UserName;
+            
             repo.AddStory(model);
             return Redirect("Story");// pass to story
 
         }
-        public IActionResult Story() 
+        public IActionResult Story(string date, string name) 
         {
             // var stories = context.Story.Include(Story => Story.User).ToList<Story>();
             // return View(stories);
-            List<Story> story = repo.Story.ToList<Story>();
-            return View();
+            //List<Story> story = repo.Story.ToList<Story>();
+            List<Story> stories = new List<Story>();
+            if (!String.IsNullOrEmpty(name))
+            {
+                stories = (from r in repo.Story
+                           where r.User.Name == name
+                           select r).ToList();    
+            }
+            else if (!String.IsNullOrEmpty(date))
+            {
+                var parseDate = DateTime.Parse(date);
+                stories = (from r in repo.Story
+                           where r.Date.Date == parseDate.Date
+                           select r).ToList();
+            }
+            return View(stories);
+            
         }
         [HttpGet]
         public IActionResult Quiz()

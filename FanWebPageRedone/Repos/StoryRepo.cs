@@ -9,11 +9,11 @@ namespace FanWebPageRedone.Repos
 {
     public class StoryRepo : Istories
     {
-        StoriesContext context;
+       private StoriesContext context;
 
 
 
-        private StoryRepo(StoriesContext s)
+        public StoryRepo(StoriesContext s)
         {
             context = s;
         }
@@ -27,8 +27,14 @@ namespace FanWebPageRedone.Repos
 
         public void AddStory(Story story)
         {
+            story.User = context.User.Where(u => u.Name == story.User.Name).FirstOrDefault();// allowing the story object to be virtual 
+            //maked this possible. assigning full connected object store.user.name which is an asp net user object. first or default is a search. 
+            //it will return first object or if it is empty it will return null.
             context.Story.Add(story);
             context.SaveChanges();
+
+            
+
         }
 
         public Story GetPostByTitle(string Title)

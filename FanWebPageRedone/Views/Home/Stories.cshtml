@@ -4,6 +4,8 @@
     ViewData["Title"] = "Stories";
 }
 
+
+
 <div class="container">
     <header class="jumbotron">
         <h1>Lana del rey stories page</h1>
@@ -18,7 +20,7 @@
     <div class="row">
         <div class="col-sm-1"></div>
         <p>lana del rey has amazing stories</p>
-        <div class="col-sm-1"></div> 
+        <div class="col-sm-1"></div>
         <p> they usually involve other famous people or close frineds/fans</p>
     </div>
     <div class="row">
@@ -41,7 +43,7 @@
     <input asp-for="Topic" /><br />
 
     <label asp-for="User">YourName</label><br />
-    <input asp-for="UserName" /><br />
+    <input asp-for="User.Name" /><br />
 
     <label asp-for="Text">Story</label><br />
     <textarea asp-for="Text" placeholder="Write story here">
@@ -67,4 +69,4 @@
 
 </p>
 
-<a asp-controller="Home" asp-action="Index">Home</a>
+<a asp-controller="Home" asp-action="Story">Forum</a>

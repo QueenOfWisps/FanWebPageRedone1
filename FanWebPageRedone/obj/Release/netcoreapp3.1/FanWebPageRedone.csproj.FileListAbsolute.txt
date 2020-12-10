@@ -84,3 +84,4 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcor
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\Razor\Views\Home\Quiz.cshtml.g.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\Razor\Views\Home\Story.cshtml.g.cs
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\Microsoft.Web.Services3.dll

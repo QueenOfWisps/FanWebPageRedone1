@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FanWebPageRedone.Models;
+using FanWebPageRedone.Repos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +27,8 @@ namespace FanWebPageRedone
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+           
+            services.AddTransient<Istories, StoryRepo>();
             services.AddDbContext<StoriesContext>(options =>
             options.UseSqlServer(Configuration["ConnectionStrings:ConnectionString"]));
         }
@@ -45,14 +48,26 @@ namespace FanWebPageRedone
             }
 
 
-         //  var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>();
-         //   var context = serviceScope.CreateScope().ServiceProvider.GetRequiredService<StoriesContext>();
+          //var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>();
+           //var context = serviceScope.CreateScope().ServiceProvider.GetRequiredService<StoriesContext>();
 
-         //   context.Database.EnsureDeleted();
-         //   context.Database.EnsureCreated();
+             //context.Database.EnsureDeleted();
+            //context.Database.EnsureCreated();
 
-           // context.Database.Migrate();
-
+            // context.Database.Migrate();
+            /*
+            if (!context.Story.Any()) //add only if not exist
+            {
+                //instantiate models
+                var story = new Story();
+                // seed data.
+                var stories = story.Seed();
+                //add list of models to the user context
+                context.Story.AddRange(stories);
+                //save
+                context.SaveChanges();
+            }
+            */
 
 
             app.UseHttpsRedirection();

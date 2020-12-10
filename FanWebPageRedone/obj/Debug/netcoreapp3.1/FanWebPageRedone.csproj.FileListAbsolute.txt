@@ -82,5 +82,6 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcorea
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.csprojAssemblyReference.cache
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\Razor\Views\Home\Story.cshtml.g.cs
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Microsoft.Web.Services3.dll
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.csproj.CoreCompileInputs.cache
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.MvcApplicationPartsAssemblyInfo.cache

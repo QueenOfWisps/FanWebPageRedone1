@@ -4,22 +4,47 @@
     ViewData["Title"] = "Stories";
 }
 
+<h1 class="display-4">Filter Reviews by name</h1>
+Enter a Name
+<form method="post" class="container">
+    <div class="row p-2">
+        <label for="input" class="control-label col-md-1">Name</label>
+        <input name="name" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <button type="submit" class="form-control btn btn-dark col-2">Submit</button>
+        <a asp-action="forum" class="btn btn-secondary col-3">Reset</a>
+    </div>
+</form>
+
+<h1 class="display-4">Filter Reviews by date</h1>
+Enter a date
+<form method="post" class="container">
+    <div class="row p-2">
+        <label for="input" class="control-label col-md-1">Name</label>
+        <input name="date" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <button type="submit" class="form-control btn btn-dark col-2">Submit</button>
+        <a asp-action="forum" class="btn btn-secondary col-3">Reset</a>
+    </div>
+</form>
 
 
 <h2>Your Stories</h2>
 @foreach (Story story in Model)
 {
-<p>
-    <strong>Title:</strong><br />
-    @story.StoryTitle<br />
-    <strong>Topic</strong><br />
-    @story.Topic<br />
-    <strong>Name:</strong><br />
-    @story.User.Name<br />
-    <strong>Text:</strong><br />
-    @story.Text <br />
-    <strong>Date:</strong><br />
-    @story.Date<br />
+    <p>
+        <strong>Title:</strong><br />
+        @story.StoryTitle<br />
+        <strong>Topic</strong><br />
+        @story.Topic<br />
+        <strong>Name:</strong><br />
+        @story.User.Name<br />
+        <strong>Text:</strong><br />
+        @story.Text <br />
+        <strong>Date:</strong><br />
+        @story.Date<br />
 
-</p>
+    </p>
 }
