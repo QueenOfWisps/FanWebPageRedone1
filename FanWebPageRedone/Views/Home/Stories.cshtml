@@ -35,7 +35,10 @@
 </div>
 
 <br />
+
 <form method="post">
+    @*@Html.ValidationSummary("", new { @class = "text-danger" }) //this will enforce validation by not allowing the user to enter more than the limit. *@
+    <div class="text-danger" asp-validation-summary="All"></div>
     <label asp-for="StoryTitle">Title</label><br />
     <input asp-for="StoryTitle" /><br />
 
@@ -70,3 +73,7 @@
 </p>
 
 <a asp-controller="Home" asp-action="Story">Forum</a>
+
+@section scripts{
+    <partial name="_ValidationScriptsPartial" />
+}

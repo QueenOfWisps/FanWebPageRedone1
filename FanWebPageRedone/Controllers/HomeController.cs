@@ -46,9 +46,16 @@ namespace FanWebPageRedone.Controllers
         public IActionResult Stories(Story model) //specify class/model, then pass in the created model that is story.
         {
            // model.User = new User();
-            
-            repo.AddStory(model);
-            return Redirect("Story");// pass to story
+            if(ModelState.IsValid)
+            {
+                repo.AddStory(model);
+                return Redirect("Story");// pass to story
+            }
+            else
+            {
+                AddErrors();
+                return View(model);
+            }
 
         }
         public IActionResult Story(string date, string name) 
@@ -72,6 +79,11 @@ namespace FanWebPageRedone.Controllers
             }
             return View(stories);
             
+        }
+
+        private void AddErrors()
+        {
+            ModelState.AddModelError("", "Error has occured.");
         }
         [HttpGet]
         public IActionResult Quiz()
