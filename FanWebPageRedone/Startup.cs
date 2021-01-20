@@ -7,6 +7,7 @@ using FanWebPageRedone.Repos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,6 +32,8 @@ namespace FanWebPageRedone
             services.AddTransient<Istories, StoryRepo>();
             services.AddDbContext<StoriesContext>(options =>
             options.UseSqlServer(Configuration["ConnectionStrings:ConnectionString"]));
+
+            services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<StoriesContext>().AddDefaultTokenProviders();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,6 +49,7 @@ namespace FanWebPageRedone
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            
 
 
           //var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>();

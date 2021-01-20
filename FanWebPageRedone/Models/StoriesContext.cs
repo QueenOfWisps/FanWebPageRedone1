@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace FanWebPageRedone.Models
 {
-    public class StoriesContext : DbContext
+    public class StoriesContext : IdentityDbContext
     {
         public StoriesContext(
             DbContextOptions<StoriesContext>options) : base(options) { 
@@ -16,7 +17,7 @@ namespace FanWebPageRedone.Models
         
 
         public DbSet<Story> Story { get; set;  }
-        public DbSet<User>  User  { get; set; }
+        public DbSet<AppUser>  User  { get; set; }
 
     }
 }

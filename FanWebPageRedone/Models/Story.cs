@@ -13,12 +13,12 @@ namespace FanWebPageRedone.Models
             //setting up a pimary key for story.
             public int StoryId { get; set; }
             
-            [MaxLength(50)]
+           [MaxLength(50)]
             public string StoryTitle { get; set; }
             public string Topic { get; set; }
             //setting up foriegn key from user in story. entity framework automatically sets up a relationship between these two tables 
             //when a username of type user is created. it just knows its from user. its magic.
-            public virtual User User { get; set; }
+            public virtual AppUser User { get; set; }
             [StringLength(500,MinimumLength=20)]
             public string Text { get; set; }
             public DateTime Date { get; set; }

@@ -34,9 +34,8 @@ namespace FanWebPageRedone.Controllers
         public IActionResult Stories()
         {
             Story model = new Story();//new object story created.
-            User userName = new User();//new object created
+            AppUser userName = new AppUser();//new object created
             userName.Name = "Test";
-            userName.UserId = 1;
             model.User = userName; //you need to make the username from the model equal the initialized model.
             return View(model); //put model into view.
         }

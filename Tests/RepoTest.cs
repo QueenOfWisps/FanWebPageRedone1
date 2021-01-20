@@ -23,7 +23,7 @@ namespace Tests
             {
                 //create values for empty repo.
                 Topic = "Love this site",
-                 User = new User() { Name = "Me" },
+                 User = new AppUser() { Name = "Me" },
                 Text = "Wow lana del rey is so cool"
             };
 
