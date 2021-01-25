@@ -8,4 +8,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <TimeStampOfAssociatedLegacyPublishXmlFile />
     <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAjFy7qWI/bU6QfbbF9Pl6AwAAAAACAAAAAAAQZgAAAAEAACAAAAAhyHmBVchpRH+77BnFcBD5SIhQ8bnmAwmd6pj4Y+ZXJAAAAAAOgAAAAAIAACAAAABwycTQ4IWa9Wh19iMOiGStJ+Nfb8MEf74XTkjeYhnF3YAAAAC6d4yKIKOnjJmk3DmpsOX4LNT+NlUTxoIecbMOkA0Wfz7AW5CzyCxK1ict9x0NFvQ4cahlbg1pC4wEKSUNWPDBmNY0CXgQ3z1/kcCekhddRdMfuvcdiTfSUe1MGAo9CdRXrGanYuaozoorT3fUJrGWsfS5E9qzkKwbYVpiX6Vbu0AAAACqZT/EXYU+2X9hoqdY6qr5mRu22iH/Mhl0aQ+UNrdMDlEl4tgpKOzdj7/9D/M6B38bD1BcR8bzAOOxhniEm624</EncryptedPassword>
   </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="ConnectionString">
+      <Value>Server=tcp:fanwebpageredonefall2020.database.windows.net,1433%3bInitial Catalog=FanWebPageRedone%3bPersist Security Info=False%3bUser ID=rainbow%3bPassword=D5ig2kdq9900%40%3bMultipleActiveResultSets=False%3bEncrypt=True%3bTrustServerCertificate=False%3bConnection Timeout=30%3b</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
 </Project>

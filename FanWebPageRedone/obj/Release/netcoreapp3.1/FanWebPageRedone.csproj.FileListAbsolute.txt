@@ -85,3 +85,8 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcor
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\Razor\Views\Home\Quiz.cshtml.g.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\Razor\Views\Home\Story.cshtml.g.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\Microsoft.Web.Services3.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll

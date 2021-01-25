@@ -36,6 +36,24 @@ namespace FanWebPageRedone.Repos
             
 
         }
+        //move this to the controller
+        //public async bool AddUser(RegisterVM model)
+        //{
+        //    var user = new AppUser { UserName = model.Username };
+            
+        //    var result = await userManager.CreateAsync(user, model.Password);
+        //    if (result.Succeeded)
+        //    {
+        //        await signInManager.SignInAsync(user, isPersistent: false);
+        //        return true;
+        //    }
+        //    else
+        //    {
+        //        //throw exception or return failed result
+        //        return false;
+        //    }
+        //}
+    
 
         public Story GetPostByTitle(string Title)
         {

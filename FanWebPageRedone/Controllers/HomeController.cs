@@ -40,7 +40,7 @@ namespace FanWebPageRedone.Controllers
             return View(model); //put model into view.
         }
 
-
+ 
         [HttpPost]
         public IActionResult Stories(Story model) //specify class/model, then pass in the created model that is story.
         {
@@ -99,7 +99,24 @@ namespace FanWebPageRedone.Controllers
         }
 
 
+        public IActionResult Registration()
+        {
+            return View(new RegisterVM());
 
+        }
+
+        [HttpPost]
+        public IActionResult Registration(RegisterVM model)
+        {
+            //check if the model is valid
+            //create user
+            //if (ModelState.IsValid)
+            //{
+            //    repo.AddUser(model);
+            //}
+
+            return View();
+        }
 
 
 
