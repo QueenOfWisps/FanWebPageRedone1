@@ -39,23 +39,15 @@ namespace FanWebPageRedone
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts();
-            }
-            
+           
 
 
-          //var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>();
-           //var context = serviceScope.CreateScope().ServiceProvider.GetRequiredService<StoriesContext>();
 
-             //context.Database.EnsureDeleted();
+
+            //var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>();
+            //var context = serviceScope.CreateScope().ServiceProvider.GetRequiredService<StoriesContext>();
+
+            //context.Database.EnsureDeleted();
             //context.Database.EnsureCreated();
 
             // context.Database.Migrate();
@@ -72,14 +64,23 @@ namespace FanWebPageRedone
                 context.SaveChanges();
             }
             */
-
-
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts();
+            }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseRouting();
 
             app.UseAuthorization();
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
