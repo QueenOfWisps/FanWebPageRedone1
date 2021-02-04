@@ -92,3 +92,4 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcorea
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.dll
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.pdb
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.genruntimeconfig.cache
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.csprojAssemblyReference.cache

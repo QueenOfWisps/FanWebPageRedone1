@@ -90,3 +90,6 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcor
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\Razor\Views\Account\Index.cshtml.g.cs
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\Razor\Views\Account\Login.cshtml.g.cs
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\Razor\Views\Account\Registration.cshtml.g.cs
