@@ -23,6 +23,12 @@ namespace FanWebPageRedone.Controllers
 
         public IActionResult Index()
         {
+            var user = User;
+            if (User.IsInRole("Admin"))
+            {
+                bool isAdmin = true;
+            }
+
             return View();
         }
 

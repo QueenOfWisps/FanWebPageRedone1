@@ -27,12 +27,18 @@ namespace FanWebPageRedone
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication("CookieAuthentication").AddCookie("CookieAuthentication", config => {
+                config.Cookie.Name = "FanWebPageRedoneUserLogin";
+                config.LoginPath = "/Account/Login";
+                config.AccessDeniedPath = "/Account/Login";
+            });
+
             services.AddControllersWithViews();
            
             services.AddTransient<Istories, StoryRepo>();
             services.AddDbContext<StoriesContext>(options =>
             options.UseSqlServer(Configuration["ConnectionStrings:ConnectionString"]));
-
+            
             services.AddIdentity<AppUser, IdentityRole>().AddEntityFrameworkStores<StoriesContext>().AddDefaultTokenProviders();
         }
 
@@ -40,7 +46,11 @@ namespace FanWebPageRedone
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
            
-
+            //using(var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            //{
+            //    var context = serviceScope.ServiceProvider.GetService<StoriesContext>();
+            //    SeedData.init(context);
+            //}
 
 
 

@@ -11,7 +11,8 @@ namespace FanWebPageRedone.Repos
         IQueryable<Story> Story { get; }
 
         void AddStory(Story story);
-
+        void DeleteRange(string id);
+        void DeleteStory(Story story);
         Story GetPostByTitle(string Title);
 
     }

@@ -32,29 +32,21 @@ namespace FanWebPageRedone.Repos
             //it will return first object or if it is empty it will return null.
             context.Story.Add(story);
             context.SaveChanges();
-
-            
-
         }
-        //move this to the controller
-        //public async bool AddUser(RegisterVM model)
-        //{
-        //    var user = new AppUser { UserName = model.Username };
-            
-        //    var result = await userManager.CreateAsync(user, model.Password);
-        //    if (result.Succeeded)
-        //    {
-        //        await signInManager.SignInAsync(user, isPersistent: false);
-        //        return true;
-        //    }
-        //    else
-        //    {
-        //        //throw exception or return failed result
-        //        return false;
-        //    }
-        //}
-    
 
+        public void DeleteStory(Story story)
+        {
+            story.User = context.User.Where(u => u.Name == story.User.Name).FirstOrDefault();
+            context.Story.Remove(story);
+            context.SaveChanges();
+        }
+    
+        public void DeleteRange(string id)
+        {
+            var stories = context.Story.Where(s => s.User.Id == id).ToList();
+            context.Story.RemoveRange(stories);
+            context.SaveChanges();
+        }
         public Story GetPostByTitle(string Title)
         {
             throw new NotImplementedException();

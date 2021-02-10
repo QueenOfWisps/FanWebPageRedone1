@@ -11,14 +11,10 @@
     <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
 
     <script src="~/lib/jquery-validate/jquery.validate.min.js"></script>
-    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
-    
-    
-</head>
-<body>
-    
+    </head>
+    <body>
     <header>
-        @using Microsoft.AspNetCore.Identity
+    @using Microsoft.AspNetCore.Identity
         @inject SignInManager<AppUser> signInManager
         
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
@@ -36,6 +32,7 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Source" asp-action="Index">Sources</a>
                         </li>
+
                         @if (signInManager.IsSignedIn(User))
                         {
                             <li class="nav-item">
@@ -43,6 +40,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="LogOff">Logout</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">User Management</a>
                             </li>
                         }
                         else

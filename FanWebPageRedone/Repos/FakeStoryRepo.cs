@@ -16,7 +16,16 @@ namespace FanWebPageRedone.Repos
             story.StoryId = stories.Count;
             stories.Add(story);
         }
+        public void DeleteStory(Story story)
+        {
+            throw new NotImplementedException();
 
+        }
+        public void DeleteRange(string id)
+        {
+            throw new NotImplementedException();
+
+        }
         public Story GetPostByTitle(string Title)
         {
             throw new NotImplementedException();

@@ -14,7 +14,11 @@ namespace FanWebPageRedone.Models
             
         }
 
-        
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+        }
+
 
         public DbSet<Story> Story { get; set;  }
         public DbSet<AppUser>  User  { get; set; }

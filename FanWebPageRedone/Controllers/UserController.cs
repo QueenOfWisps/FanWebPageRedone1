@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using FanWebPageRedone.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authentication;
+using FanWebPageRedone.Repos;
 
 
 namespace FanWebPageRedone.Controllers
@@ -14,16 +15,18 @@ namespace FanWebPageRedone.Controllers
     //page 691
     // ignore when youa dd authorization to admin page ignore area admin we do not have one called area. 
 
-    [Authorize(Roles = "Admin")]
+    //[Authorize(Roles = "Admin")]
+    [Authorize]
     public class UserController : Controller
     {
         private UserManager<AppUser> userManager;
         private RoleManager<IdentityRole> roleManager;
-
-        public UserController( UserManager<AppUser> userMngr, RoleManager<IdentityRole> roleMngr)
+        Istories repo;
+        public UserController( UserManager<AppUser> userMngr, RoleManager<IdentityRole> roleMngr,Istories r)
         {
             userManager = userMngr;
             roleManager = roleMngr;
+            repo = r;
 
         }
         public async Task<IActionResult> Index()
@@ -47,6 +50,15 @@ namespace FanWebPageRedone.Controllers
             AppUser user = await userManager.FindByIdAsync(id);
             if(user != null)
             {
+                //check if they have stories
+                //StoriesContext context = new StoriesContext(new Microsoft.EntityFrameworkCore.DbContextOptions<StoriesContext>());
+                //var stories = context.Story.Where(s => s.User.Id == id).ToList();
+                // context.Story.RemoveRange(stories);
+
+                //context.SaveChanges();
+                var deleteList = repo.Story.Where(s => s.User.Id == id).ToList();
+                
+
                 IdentityResult result = await userManager.DeleteAsync(user);
                 if (!result.Succeeded)
                 {
@@ -64,17 +76,21 @@ namespace FanWebPageRedone.Controllers
         [HttpPost]
         public async Task<IActionResult> AddToAdmin(string id)
         {
-            IdentityRole adminRole = await roleManager.FindByNameAsync("Admin");
-            if (adminRole == null)
-            {
-                TempData["message"] = "Admin role does not exist. " + "Click 'Create Admin Role' button to create it"; 
-            }
-            else
-            {
+            //IdentityRole adminRole = await roleManager.FindByNameAsync("Admin");
+            //if (adminRole == null)
+            //{
+            //    TempData["message"] = "Admin role does not exist. " + "Click 'Create Admin Role' button to create it"; 
+            //}
+            //else
+            //{
                 AppUser user = await userManager.FindByIdAsync(id);
-                await userManager.AddToRoleAsync(user, adminRole.Name);
-            }
-            return RedirectToAction("Index");
+                var result = await userManager.AddToRoleAsync(user,"Admin");
+                if (result.Succeeded)
+                {
+                    return RedirectToAction("Index");
+                }
+            //}
+            return RedirectToAction("Login", "Account");
         }
         [HttpPost]
         public async Task<IActionResult> RemoveFromAdmin(string id)

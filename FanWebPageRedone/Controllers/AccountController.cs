@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using FanWebPageRedone.Models;
 using Microsoft.AspNetCore.Identity;
+using FanWebPageRedone.Repos;
 
 namespace FanWebPageRedone.Controllers
 {
@@ -12,12 +13,12 @@ namespace FanWebPageRedone.Controllers
     {
         private UserManager<AppUser> userManager;
         private SignInManager<AppUser> signInManager;
-
+        
         public AccountController(UserManager<AppUser> usrMngr, SignInManager<AppUser> signInMngr)
         {
             userManager = usrMngr;
             signInManager = signInMngr;
-
+           
         }
         public IActionResult Index()
         {
@@ -85,6 +86,10 @@ namespace FanWebPageRedone.Controllers
             return View(model);
         }
 
+        public ActionResult AccessDenied()
+        {
+            return RedirectToAction("Login");
+        }
 
         public async Task<IActionResult> LogOff()
         {

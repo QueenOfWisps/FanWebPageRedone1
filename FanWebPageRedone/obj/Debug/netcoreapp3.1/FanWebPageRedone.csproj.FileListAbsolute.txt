@@ -1,9 +1,3 @@
-C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.AssemblyInfoInputs.cache
-C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.AssemblyInfo.cs
-C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.csproj.CoreCompileInputs.cache
-C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.RazorAssemblyInfo.cache
-C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.RazorAssemblyInfo.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\libman.json
@@ -63,6 +57,12 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcorea
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.AssemblyInfoInputs.cache
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.AssemblyInfo.cs
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.csproj.CoreCompileInputs.cache
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.RazorAssemblyInfo.cache
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.RazorAssemblyInfo.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.TagHelpers.input.cache
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.TagHelpers.output.cache
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.RazorCoreGenerate.cache
@@ -81,6 +81,7 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcorea
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\Razor\Views\Source\BooksAndPrint.cshtml.g.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\Razor\Views\Source\Index.cshtml.g.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\Razor\Views\Source\Links.cshtml.g.cs
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.RazorTargetAssemblyInfo.cache
