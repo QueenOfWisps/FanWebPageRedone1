@@ -15,8 +15,8 @@ namespace FanWebPageRedone.Controllers
     //page 691
     // ignore when youa dd authorization to admin page ignore area admin we do not have one called area. 
 
-    //[Authorize(Roles = "Admin")]
-    [Authorize]
+    [Authorize(Roles = "Admin")]
+    //[Authorize]
     public class UserController : Controller
     {
         private UserManager<AppUser> userManager;
@@ -76,20 +76,23 @@ namespace FanWebPageRedone.Controllers
         [HttpPost]
         public async Task<IActionResult> AddToAdmin(string id)
         {
-            //IdentityRole adminRole = await roleManager.FindByNameAsync("Admin");
-            //if (adminRole == null)
-            //{
-            //    TempData["message"] = "Admin role does not exist. " + "Click 'Create Admin Role' button to create it"; 
-            //}
-            //else
-            //{
+            var roleExists = await roleManager.RoleExistsAsync("Admin");
+
+            IdentityRole adminRole = await roleManager.FindByNameAsync("Admin");
+            if (adminRole == null)
+            {
+                TempData["message"] = "Admin role does not exist. " + "Click 'Create Admin Role' button to create it";
+            }
+            else
+            {
+                
                 AppUser user = await userManager.FindByIdAsync(id);
                 var result = await userManager.AddToRoleAsync(user,"Admin");
                 if (result.Succeeded)
                 {
                     return RedirectToAction("Index");
                 }
-            //}
+            }
             return RedirectToAction("Login", "Account");
         }
         [HttpPost]

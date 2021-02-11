@@ -13,38 +13,43 @@ namespace FanWebPageRedone
 {
     public class Program
     {
+        //public static void Main(string[] args)
+        //{
+        //    var host = CreateHostBuilder(args).Build();
+        //    CreateDbIfNotExists(host);
+        //    host.Run();
+        //}
+
+        //public static void CreateDbIfNotExists(IHost host)
+        //{
+        //    using (var scope = host.Services.CreateScope())
+        //    {
+        //        var services = scope.ServiceProvider;
+        //        try
+        //        {
+        //            var context = services.GetRequiredService<StoriesContext>();
+        //            SeedData.init(context);
+        //        }
+        //        catch(Exception ex)
+        //        {
+        //            var logger = services.GetRequiredService<ILogger<Program>>();
+        //            logger.LogError(ex, "error creating");
+        //        }
+        //    }
+        //}
+
+
         public static void Main(string[] args)
         {
-            var host = CreateHostBuilder(args).Build();
-            CreateDbIfNotExists(host);
-            host.Run();
+            CreateHostBuilder(args).Build().Run();
         }
-
-        public static void CreateDbIfNotExists(IHost host)
-        {
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                try
-                {
-                    var context = services.GetRequiredService<StoriesContext>();
-                    SeedData.init(context);
-                }
-                catch(Exception ex)
-                {
-                    var logger = services.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "error creating");
-                }
-            }
-        }
-
-
-
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    webBuilder.UseStartup<Startup>();
+                    webBuilder.UseStartup<Startup>()
+                   .UseDefaultServiceProvider(           // add this
+                        options => options.ValidateScopes = false);
                 });
+        }
     }
-}
