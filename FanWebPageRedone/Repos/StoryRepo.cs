@@ -20,14 +20,20 @@ namespace FanWebPageRedone.Repos
         public IQueryable<Story> Story
         {
             get
+
             {
-                return context.Story.Include(story => story.User);  
+                // Get all the Review objects in the Reviews DbSet
+                // and include the Reivewer object and list of comments in each Review.
+                return context.Story.Include(story => story.User)
+                         .Include(story => story.Comments)
+                         .ThenInclude(comment => comment.Commenter);
             }
-        } 
+        }
+    
 
         public void AddStory(Story story)
         {
-            story.User = context.User.Where(u => u.Name == story.User.Name).FirstOrDefault();// allowing the story object to be virtual 
+            story.User = (AppUser)context.Users.Where(u => u.UserName == story.User.Name).FirstOrDefault();// allowing the story object to be virtual 
             //maked this possible. assigning full connected object store.user.name which is an asp net user object. first or default is a search. 
             //it will return first object or if it is empty it will return null.
             context.Story.Add(story);
@@ -36,7 +42,7 @@ namespace FanWebPageRedone.Repos
 
         public void DeleteStory(Story story)
         {
-            story.User = context.User.Where(u => u.Name == story.User.Name).FirstOrDefault();
+            story.User = (AppUser)context.Users.Where(u => u.UserName == story.User.Name).FirstOrDefault();
             context.Story.Remove(story);
             context.SaveChanges();
         }
@@ -51,5 +57,19 @@ namespace FanWebPageRedone.Repos
         {
             throw new NotImplementedException();
         }
+
+        public void UpdateStory(Story story)
+        {
+            context.Story.Update(story);   // Find the review by ReviewID and update it
+            context.SaveChanges();
+        }
+
+        public AppUser GetUser(string username)
+        {
+
+            var user = context.Users.Where(u => u.UserName == username).FirstOrDefault();
+            return ((AppUser)user); 
+        }
+
     }
 }

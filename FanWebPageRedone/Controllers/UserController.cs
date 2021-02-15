@@ -15,7 +15,7 @@ namespace FanWebPageRedone.Controllers
     //page 691
     // ignore when youa dd authorization to admin page ignore area admin we do not have one called area. 
 
-    [Authorize(Roles = "Admin")]
+   // [Authorize(Roles = "Admin")]
     //[Authorize]
     public class UserController : Controller
     {

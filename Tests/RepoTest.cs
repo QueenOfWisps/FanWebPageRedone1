@@ -18,7 +18,7 @@ namespace Tests
             // Arrange
 
             var fakerepo = new FakeStoryRepo();
-            var controller = new HomeController(fakerepo);
+            var controller = new HomeController(fakerepo,null);
             var story = new Story()
             {
                 //create values for empty repo.

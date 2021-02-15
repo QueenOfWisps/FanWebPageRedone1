@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FanWebPageRedone.Migrations
 {
     [DbContext(typeof(StoriesContext))]
-    [Migration("20210211201740_All")]
+    [Migration("20210213001720_All")]
     partial class All
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,34 @@ namespace FanWebPageRedone.Migrations
                 .HasAnnotation("ProductVersion", "3.1.9")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("FanWebPageRedone.Models.Comment", b =>
+                {
+                    b.Property<int>("CommentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CommentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("CommentText")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CommenterId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int?>("StoryId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CommentID");
+
+                    b.HasIndex("CommenterId");
+
+                    b.HasIndex("StoryId");
+
+                    b.ToTable("Comments");
+                });
 
             modelBuilder.Entity("FanWebPageRedone.Models.Story", b =>
                 {
@@ -264,6 +292,17 @@ namespace FanWebPageRedone.Migrations
                         .HasMaxLength(50);
 
                     b.HasDiscriminator().HasValue("AppUser");
+                });
+
+            modelBuilder.Entity("FanWebPageRedone.Models.Comment", b =>
+                {
+                    b.HasOne("FanWebPageRedone.Models.AppUser", "Commenter")
+                        .WithMany()
+                        .HasForeignKey("CommenterId");
+
+                    b.HasOne("FanWebPageRedone.Models.Story", null)
+                        .WithMany("Comments")
+                        .HasForeignKey("StoryId");
                 });
 
             modelBuilder.Entity("FanWebPageRedone.Models.Story", b =>

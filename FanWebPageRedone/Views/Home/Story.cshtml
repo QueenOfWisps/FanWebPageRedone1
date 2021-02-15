@@ -45,6 +45,20 @@ Enter a date
         @story.Text <br />
         <strong>Date:</strong><br />
         @story.Date<br />
-
     </p>
+    @foreach (Comment comment in story.Comments)
+    {
+        <p>
+            <strong class="m-3">Comment:</strong>
+            @comment.CommentText<br />
+            <strong class="m-3">By:</strong>
+            @comment.Commenter.Name<br />
+            <strong class="m-3">Date:</strong>
+            @comment.CommentDate.Date<br />
+        </p>
+    }
+
+    <a asp-action="Comment" asp-route-reviewId="@story.StoryId" class="btn btn-secondary col-3">Add Comment</a>
+
+
 }

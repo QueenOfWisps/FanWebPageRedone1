@@ -21,7 +21,8 @@ namespace FanWebPageRedone.Models
 
 
         public DbSet<Story> Story { get; set;  }
-        public DbSet<AppUser>  User  { get; set; }
+        //public DbSet<AppUser>  User  { get; set; }
+        public DbSet<Comment> Comments { get; set; }
 
     }
 }

@@ -29,6 +29,16 @@ namespace FanWebPageRedone.Repos
         public Story GetPostByTitle(string Title)
         {
             throw new NotImplementedException();
+
+        }
+            public void UpdateStory(Story story)
+        {
+            throw new NotImplementedException();
+        }
+        public AppUser GetUser(string username)
+        {
+            throw new NotImplementedException();
         }
     }
+
 }

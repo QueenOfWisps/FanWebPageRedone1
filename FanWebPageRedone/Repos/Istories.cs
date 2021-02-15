@@ -14,6 +14,8 @@ namespace FanWebPageRedone.Repos
         void DeleteRange(string id);
         void DeleteStory(Story story);
         Story GetPostByTitle(string Title);
+        void UpdateStory(Story story);
+        AppUser GetUser(string username);
 
     }
 }

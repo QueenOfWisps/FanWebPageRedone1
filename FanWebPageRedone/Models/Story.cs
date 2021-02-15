@@ -10,8 +10,9 @@ namespace FanWebPageRedone.Models
 {
     public class Story
     {
-            //setting up a pimary key for story.
-            public int StoryId { get; set; }
+        private List<Comment> comments = new List<Comment>();
+        //setting up a pimary key for story.
+        public int StoryId { get; set; }
             
            [MaxLength(50)]
             public string StoryTitle { get; set; }
@@ -22,9 +23,14 @@ namespace FanWebPageRedone.Models
             [StringLength(500,MinimumLength=20)]
             public string Text { get; set; }
             public DateTime Date { get; set; }
-      
 
-        
+           public List<Comment> Comments
+           {
+               get { return comments; }
+           }
+
+
+
         public List<Story> Seed()
         {
             //be sure to call in startup <3.
