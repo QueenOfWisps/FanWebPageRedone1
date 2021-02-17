@@ -52,13 +52,13 @@ Enter a date
             <strong class="m-3">Comment:</strong>
             @comment.CommentText<br />
             <strong class="m-3">By:</strong>
-            @comment.Commenter.Name<br />
+            @comment.Commenter.UserName<br />
             <strong class="m-3">Date:</strong>
             @comment.CommentDate.Date<br />
         </p>
     }
 
-    <a asp-action="Comment" asp-route-reviewId="@story.StoryId" class="btn btn-secondary col-3">Add Comment</a>
+    <a asp-action="Comment" asp-route-storyId="@story.StoryId" class="btn btn-secondary col-3">Add Comment</a>
 
 
 }

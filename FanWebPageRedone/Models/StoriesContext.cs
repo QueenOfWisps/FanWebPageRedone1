@@ -18,9 +18,10 @@ namespace FanWebPageRedone.Models
         {
             base.OnModelCreating(builder);
         }
-
+        
 
         public DbSet<Story> Story { get; set;  }
+
         //public DbSet<AppUser>  User  { get; set; }
         public DbSet<Comment> Comments { get; set; }
 

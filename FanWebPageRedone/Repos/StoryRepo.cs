@@ -43,6 +43,7 @@ namespace FanWebPageRedone.Repos
         public void DeleteStory(Story story)
         {
             story.User = (AppUser)context.Users.Where(u => u.UserName == story.User.Name).FirstOrDefault();
+            
             context.Story.Remove(story);
             context.SaveChanges();
         }
@@ -66,8 +67,13 @@ namespace FanWebPageRedone.Repos
 
         public AppUser GetUser(string username)
         {
+            
 
             var user = context.Users.Where(u => u.UserName == username).FirstOrDefault();
+            if (user == null) 
+            {
+                return null;
+            }
             return ((AppUser)user); 
         }
 

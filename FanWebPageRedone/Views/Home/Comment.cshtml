@@ -5,6 +5,7 @@
 <br />
 <div asp-validation-summary="All" class="text-danger"></div>
 <form method="post" class="container">
+    <input type="hidden" asp-for="StoryID" />
     <div class="row p-2">
         <label asp-for="CommentText" class="control-label  col-md-1">Review</label><br />
         <textarea asp-for="CommentText" placeholder="Write your review here" class="form-control col-md-6">

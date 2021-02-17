@@ -38,9 +38,9 @@ namespace FanWebPageRedone.Controllers
             return View();
         }
 
-        public IActionResult History() 
-        { 
-            return View(); 
+        public IActionResult History()
+        {
+            return View();
         }
 
         public IActionResult Stories()
@@ -50,19 +50,23 @@ namespace FanWebPageRedone.Controllers
             userName.Name = "Test";
             model.User = userName;
             //you need to make the username from the model equal the initialized model.
-            
+
             return View(model); //put model into view.
         }
 
- 
+
         [HttpPost]
         public IActionResult Stories(Story model) //specify class/model, then pass in the created model that is story.
         {
-           // model.User = new User();
-            if(ModelState.IsValid)
+            // model.User = new User();
+            if (ModelState.IsValid)
             {
                 model.User = repo.GetUser(User.Identity.Name);
-                repo.AddStory(model);
+                if (model.User != null)
+                {
+                    repo.AddStory(model);
+                }
+
                 return Redirect("Story");// pass to story
             }
             else
@@ -72,7 +76,8 @@ namespace FanWebPageRedone.Controllers
             }
 
         }
-        public IActionResult Story(string date, string name) 
+
+        public IActionResult Story(string date, string name)
         {
             // var stories = context.Story.Include(Story => Story.User).ToList<Story>();
             // return View(stories);
@@ -84,8 +89,9 @@ namespace FanWebPageRedone.Controllers
             if (!String.IsNullOrEmpty(name))
             {
                 stories = (from r in repo.Story
-                           where r.User.Name == name
-                           select r).ToList();    
+                           where r.User.UserName == name
+                           select r).ToList();
+
             }
             else if (!String.IsNullOrEmpty(date))
             {
@@ -95,14 +101,14 @@ namespace FanWebPageRedone.Controllers
                            select r).ToList();
             }
             return View(stories);
-            
+
         }
 
 
         [Authorize]
-        public IActionResult Comment(int reviewId)
+        public IActionResult Comment(int storyId)
         {
-            var commentVM = new CommentVM { StoryID = reviewId };
+            var commentVM = new CommentVM { StoryID = storyId };
             return View(commentVM);
         }
 
@@ -115,15 +121,15 @@ namespace FanWebPageRedone.Controllers
             comment.CommentDate = DateTime.Now;
 
             // Retrieve the review that this comment is for
-            var review = (from r in repo.Story
+            var story = (from r in repo.Story
                           where r.StoryId == commentVM.StoryID
                           select r).First<Story>();
 
             // Store the review with the comment in the database
-            review.Comments.Add(comment);
-            repo.UpdateStory(review);
+            story.Comments.Add(comment);
+            repo.UpdateStory(story);
 
-            return RedirectToAction("Reviews");
+            return RedirectToAction("Story");
         }
         private void AddErrors()
         {
