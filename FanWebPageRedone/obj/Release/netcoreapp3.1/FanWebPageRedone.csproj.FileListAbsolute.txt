@@ -2,7 +2,6 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcor
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\appsettings.json
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\libman.json
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\Properties\launchSettings.json
-C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\Properties\ServiceDependencies\FanWebPageRedoneFall2020 - Web Deploy\profile.arm.json
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\FanWebPageRedone.exe
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\FanWebPageRedone.deps.json
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\FanWebPageRedone.runtimeconfig.json
@@ -11,7 +10,6 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcor
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\FanWebPageRedone.pdb
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\FanWebPageRedone.Views.dll
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\FanWebPageRedone.Views.pdb
-C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\FanWebPageRedone.csprojAssemblyReference.cache
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\FanWebPageRedone.AssemblyInfoInputs.cache
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\FanWebPageRedone.AssemblyInfo.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\FanWebPageRedone.csproj.CoreCompileInputs.cache
@@ -95,3 +93,5 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcor
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\Razor\Views\Account\Registration.cshtml.g.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\Razor\Views\User\Index.cshtml.g.cs
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\Razor\Views\Home\Comment.cshtml.g.cs
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Release\netcoreapp3.1\web.config
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Release\netcoreapp3.1\FanWebPageRedone.csprojAssemblyReference.cache

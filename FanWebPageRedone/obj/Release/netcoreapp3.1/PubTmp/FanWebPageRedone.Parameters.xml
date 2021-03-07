@@ -1,9 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
-  <parameter name="IIS Web Application Name" description="" value="FanWebPageRedoneFall2020" tags="IisApp">
+  <parameter name="IIS Web Application Name" description="" value="pennywife-001-site2" tags="IisApp">
     <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\princ\\source\\repos\\FanWebPageRedone\\FanWebPageRedone\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
-  </parameter>
-  <parameter name="FanWebPageRedone.Models.StoriesContext" description="" value="Server=tcp:fanwebpageredone2020.database.windows.net,1433;Initial Catalog=fanwebpageredone;Persist Security Info=False;User ID=coco;Password=D5ig2kdq9900;MultipleActiveResultSets=True;Encrypt=True;TrustServerCertificate=True;Connection Timeout=30;" tags="dbfullsql">
-    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\princ\\source\\repos\\FanWebPageRedone\\FanWebPageRedone\\obj\\Release\\netcoreapp3\.1\\PubTmp\\EFSQLScripts\\FanWebPageRedone\.Models\.StoriesContext\.sql$" />
   </parameter>
 </parameters>

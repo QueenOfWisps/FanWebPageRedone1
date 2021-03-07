@@ -77,5 +77,11 @@ namespace FanWebPageRedone.Repos
             return ((AppUser)user); 
         }
 
+        public Comment GetComment(int id)
+        {
+            var comments = context.Comments.Where(p => p.CommentID==id).FirstOrDefault();
+            return comments;
+        }
+
     }
 }

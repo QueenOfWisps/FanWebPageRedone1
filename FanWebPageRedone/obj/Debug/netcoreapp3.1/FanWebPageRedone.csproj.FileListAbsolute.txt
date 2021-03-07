@@ -9,7 +9,6 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcorea
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\libman.json
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
-C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\Properties\ServiceDependencies\FanWebPageRedoneFall2020 - Web Deploy\profile.arm.json
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\FanWebPageRedone.exe
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\FanWebPageRedone.deps.json
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\FanWebPageRedone.runtimeconfig.json
@@ -95,3 +94,4 @@ C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcorea
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.pdb
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\FanWebPageRedone.genruntimeconfig.cache
 C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\obj\Debug\netcoreapp3.1\Razor\Views\Home\Comment.cshtml.g.cs
+C:\Users\princ\source\repos\FanWebPageRedone\FanWebPageRedone\bin\Debug\netcoreapp3.1\web.config
